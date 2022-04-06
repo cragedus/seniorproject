@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<!--CSC428 Team Project by Connor Soran, Damien Zucker and Dustin Crager -->
+<html>
+<head>
+	<title>Apartments</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+
+
+	<!--This css style coding is for the collapsible menu button appearance-->
+	<style>
+		.collapsible {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: 1px solid black;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+		}
+
+			.active, .collapsible:hover {
+				background-color: #555;
+				color: white;
+			}
+
+		.active, h4:hover {
+			background-color: #555;
+			color: white;
+		}
+
+		.content {
+			padding: 0 18px;
+			display: none;
+			overflow: hidden;
+			background-color: #f1f1f1;
+		}
+
+		.collapsible:after {
+			content: '\02795'; /* Unicode character for "plus" sign (+) */
+			font-size: 13px;
+			color: white;
+			float: right;
+			margin-left: 5px;
+		}
+
+		.active:after {
+			content: "\2796"; /* Unicode character for "minus" sign (-) */
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+					<h1><a href="index.html">Valkyrie<span class="logo_colour"> Turns</span></a></h1>
+
+				</div>
+			</div>
+			<div id="menubar">
+				<ul id="menu">
+					<li><a href="index.html">Home</a></li>
+					<li class="selected"><a href="apartments.html">Apartments</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="calendar.html">Calendar</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<p>
+			<img id = "image-fit" src="style/apartments1.png">
+		</p>
+		<div id="content_header"></div>
+		<div id="site_content">
+			<div id="sidebar_container">
+				<div class="sidebar">
+					<div class="sidebar_top"></div>
+					<div class="sidebar_item">
+						<h3>Giving a fresh start for your properties</h3>
+						<p>From Lakewood to Bellevue and Seattle areas, we provide a wide range of Apartments with our Services.</p>
+
+						<p>If you would like us to service your apartment properties or personal home, please reach out to us in out Contact Us page!<br /></p>
+					</div>
+					<div class="sidebar_base"></div>
+				</div>
+				<div class="sidebar">
+					<div class="sidebar_top"></div>
+
+					<div class="sidebar_base"></div>
+				</div>
+				<div class="sidebar">
+
+
+				</div>
+			</div>
+			<div id="content">
+				<!-- Table for showing apartment properties -->
+				<h2>Apartment Properties we Service:</h2>
+				<button type="button" class="collapsible">Elements</button>
+				<div class="content">
+					<br />
+					<form action="https://www.udr.com/seattle-apartments/bellevue/elements/">
+						<h1>Elements Apartments</h1>
+						<p>Elements is a comfy living space located in Bellevue, providing great views to the surrounding area.</p>
+						<button name="Elements" value="2">Website Link</button>
+						<br /> <br />
+					
+					</form>
+				</div>
+
+				<button type="button" class="collapsible">Brio Apartments</button>
+				<div class="content">
+					<br />
+					<form action="https://www.udr.com/seattle-apartments/bellevue/brio/">
+						<h1>Brio Apartments</h1>
+						<p>Ranging from Studio to 3 bedroom apartments</p>
+						<button name="Brio" value="2">Website Link</button>
+						<br /> <br />
+
+					</form>
+				</div>
+
+				<button type="button" class="collapsible">Lightbox Apartments</button>
+				<div class="content">
+					<br />
+
+					<form action="https://www.udr.com/seattle-apartments/bellevue/brio/">
+						<h1>Brio Apartments</h1>
+						<p>Ranging from Studio to 3 bedroom apartments</p>
+						<button name="Brio" value="2">Website Link</button>
+						<br /> <br />
+
+					</form>
+				</div>
+
+				<button type="button" class="collapsible">Kennedy Apartments</button>
+				<div class="content">
+					<br />
+
+					<form action="https://www.udr.com/seattle-apartments/bellevue/brio/">
+						<h1>Brio Apartments</h1>
+						<p>Ranging from Studio to 3 bedroom apartments</p>
+						<button name="Brio" value="2">Website Link</button>
+						<br /> <br />
+
+					</form>
+				</div>
+
+
+				<!--This script creates the collapsible menu items-->
+				<script>
+					var coll = document.getElementsByClassName("collapsible");
+					var i;
+
+					for (i = 0; i < coll.length; i++) {
+						coll[i].addEventListener("click", function () {
+							this.classList.toggle("active");
+							var content = this.nextElementSibling;
+							if (content.style.display === "block") {
+								content.style.display = "none";
+							} else {
+								content.style.display = "block";
+							}
+						});
+					}
+				</script>
+			</div>
+
+		</div>
+		<div id="content_footer"></div>
+		<div id="footer">
+			<p>
+				<a href="index.html">Home</a> | <a href="apartments.html">Apartments</a> | <a href="services.html">Services</a>|
+				<a href="contact.html">Contact Us</a> | <a href="calendar.html">Calendar</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

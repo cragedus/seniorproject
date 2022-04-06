@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!--CSC428 Team Project by Connor Soran, Damien Zucker and Dustin Crager -->
+<html>
+
+<head>
+    <title>Valkyrie Turns</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+
+    <script type="text/javascript">
+
+        function formValidation() {
+            var at = document.contact_form.your_email.value.indexOf("@");
+            var dot = document.contact_form.your_email.value.lastIndexOf(".");
+            var space = dot - at;
+            if (document.contact_form.your_name.value == "") {
+                alert("Please provide your name!");
+                document.contact_form.your_name.focus();
+                return false;
+            }
+            else if (at == -1 || dot == -1 || at == 0 || space < 2) {
+                alert("Please provide a valid email!");
+                document.contact_form.your_email.focus();
+                return false;
+            }
+            else if (document.contact_form.your_email.value == "") {
+                alert("Please provide a valid email!");
+                document.contact_form.your_email.focus();
+                return false;
+            }
+            else if (document.contact_form.your_enquiry.value == "") {
+                alert("Please provide a message!");
+                document.contact_form.your_enquiry.focus();
+                return false;
+            }
+            else {
+                alert("Your information was submitted!");
+            }
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1><a href="index.html">Valkyrie <span class="logo_colour">Turns</span></a></h1>
+                </div>
+            </div>
+            <div id="menubar">
+                <ul id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apartments.html">Apartments</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li class="selected"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="site_content">
+            <div id="sidebar_container">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_item">
+                        <h3>Latest News</h3>
+                        <h4>GRAND OPENING</h4>
+                        <h5>February 21st, 2020</h5>
+                        <p>We are proud to provide our services to our local communities across Washington and deliver a fresh new start to your new home.<br /></p>
+                    </div>
+                    <div class="sidebar_base"></div>
+                </div>
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_item">
+
+
+                    </div>
+                    <div class="sidebar_base"></div>
+                </div>
+                <div class="sidebar">
+                </div>
+            </div>
+            <div id="content">
+                <!-- -->
+                <h1>Contact Us</h1>
+
+                <form name="contact_form" action="form_to_datababse.php" method="post">
+                    <div class="form_settings">
+                        <!-- <form action="test.php" method="post">-->
+                        <p><span>Name</span><input class="contact" type="text" name="your_name" /></p>
+                        <p><span>Email Address</span><input class="contact" type="text" name="your_email" /></p>
+                        <p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
+                        <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" onclick="return(formValidation());" /></p>
+                </form>
+                <!--
+                 <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" onclick="checkSubmit()"/></p>
+                -->
+
+            </div>
+
+
+        </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+        <p><a href="index.html">Home</a> | <a href="apartments.html">Apartments</a> |<a href="services.html">Services</a> | <a href="contact.html">Contact Us</a> | <a href="calendar.html">Calendar</a></p>
+    </div>
+ 
+</body>
+</html>
